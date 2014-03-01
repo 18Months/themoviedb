@@ -38,7 +38,7 @@ module Tmdb
       :lists,
       :changes
     ]
-    
+
     @@fields.each do |field|
       attr_accessor field
     end
@@ -127,7 +127,7 @@ module Tmdb
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/translations")
       search.fetch_response
     end
-    
+
     #Get the similar movies for a specific movie id.
     def self.similar_movies(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/similar_movies")
@@ -142,9 +142,9 @@ module Tmdb
     end
 
     #Get the changes for a specific movie id.
-    #Changes are grouped by key, and ordered by date in descending order. 
-    #By default, only the last 24 hours of changes are returned. 
-    #The maximum number of days that can be returned in a single request is 14. 
+    #Changes are grouped by key, and ordered by date in descending order.
+    #By default, only the last 24 hours of changes are returned.
+    #The maximum number of days that can be returned in a single request is 14.
     #The language is present on fields that are translatable.
     def self.changes(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/changes")
