@@ -1,10 +1,11 @@
 module Tmdb
   class Api
     include HTTParty
+
     base_uri 'http://api.themoviedb.org/3/'
-    format :json
-    headers 'Accept' => 'application/json'
-    headers 'Content-Type' => 'application/json'
+    format   :json
+    headers  'Accept' => 'application/json'
+    headers  'Content-Type' => 'application/json'
 
     def self.config
       @@config ||= {}
@@ -15,7 +16,7 @@ module Tmdb
     end
 
     def self.language(lang)
-      if (lang.nil?)
+      if lang.nil?
         self.config.delete(:language)
       else
         self.config[:language] = lang

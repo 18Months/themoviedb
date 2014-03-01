@@ -1,5 +1,7 @@
 module Tmdb
   class Search
+    AVAILABLE_RESOURCES = %w{movie collection tv person list company keyword}
+
     def initialize(resource=nil)
       @params = {}
       @resource = resource.nil? ? '/search/movie' : resource
@@ -22,23 +24,14 @@ module Tmdb
     end
 
     def resource(resource)
-      if resource == 'movie' then
-        @resource = '/search/movie'
-      elsif resource == 'collection' then
-        @resource = '/search/collection'
-      elsif resource == 'tv' then
-        @resource = '/search/tv'
-      elsif resource == 'person' then
-        @resource = '/search/person'
-      elsif resource == 'list' then
-        @resource = '/search/list'
-      elsif resource == 'company' then
-        @resource = '/search/company'
-      elsif resource == 'keyword' then
-        @resource = '/search/keyword'
+      if AVAILABLE_RESOURCES.include?(resource) then
+        @resource = "/search/#{resource}"
       elsif resource == 'find'
         @resource = '/find'
+      else
+        raise Tmdb::Error, "The requested resource is not available."
       end
+
       self
     end
 
@@ -68,7 +61,9 @@ module Tmdb
       end
       response = Api.get(@resource, :query => options)
 
-      raise(Tmdb::Error, response.fetch('status_message', 'An unknown error occurred')) if has_errors?(response)
+      if has_errors?(response)
+        raise Tmdb::Error, response.fetch('status_message', 'An unknown error occurred')
+      end
 
       original_etag = response.headers.fetch('etag', '')
       etag = original_etag.gsub(/"/, '')
