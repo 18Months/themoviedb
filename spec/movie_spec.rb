@@ -19,6 +19,8 @@ describe Tmdb::Movie do
 
   describe "For a movie" do
     before(:each) do
+      Tmdb::Api.key("8a221fc31fcdf12a8af827465574ffc9")
+
       @movie = Tmdb::Movie
     end
 

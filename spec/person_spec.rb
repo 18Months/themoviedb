@@ -15,6 +15,8 @@ describe Tmdb::Person do
 
   describe "For person p" do
     before(:each) do
+      Tmdb::Api.key("8a221fc31fcdf12a8af827465574ffc9")
+
       @person = Tmdb::Person
     end
 

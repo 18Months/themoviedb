@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/1?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=21600
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 01 Mar 2014 15:47:53 GMT
+      Etag:
+      - "\"37a6259cc0c1dae299a7866489dff0bd\""
+      Server:
+      - nginx
+      Status:
+      - 404 Not Found
+      X-Memc:
+      - MISS
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      X-Memc-Key:
+      - a17681a7a161359ac6ff95496f469305
+      Content-Length:
+      - '94'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"status_code\":6,\"status_message\":\"Invalid id - The pre-requisite
+        id is invalid or not found\"}"
+    http_version: 
+  recorded_at: Sat, 01 Mar 2014 15:47:54 GMT
+recorded_with: VCR 2.8.0

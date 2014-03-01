@@ -21,6 +21,8 @@ describe Tmdb::Company do
   describe "For a company detail" do
 
     before(:each) do
+      Tmdb::Api.key("8a221fc31fcdf12a8af827465574ffc9")
+
       VCR.use_cassette 'company/detail' do
         @company = Tmdb::Company.detail(5)
       end
