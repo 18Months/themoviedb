@@ -1,5 +1,4 @@
 module Tmdb
-  class Error < StandardError
-
+  class Error < ::StandardError
   end
 end
