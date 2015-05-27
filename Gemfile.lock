@@ -16,6 +16,7 @@ GEM
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
     atomic (1.1.15)
+    awesome_print (1.6.1)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
@@ -49,6 +50,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  awesome_print (~> 1.6.1)
   rake (~> 10.0)
   rspec (~> 2.14)
   themoviedb!

@@ -39,7 +39,7 @@ class Hash
     if descendent_of_tmdb_struct?(klass)
       klass.new(self)
     else
-      raise Tmdb::Error, "Tried to convert to a non Tmdb::Struct object"
+      raise Tmdb::Error, 'Tried to convert to a non Tmdb::Struct object'
     end
   end
 

@@ -22,8 +22,9 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'httparty', '~> 0.11.0'
   s.add_runtime_dependency 'activesupport', '~> 4.0.3'
 
-  s.add_development_dependency 'vcr',     '~> 2.8.0'
-  s.add_development_dependency 'rake',    '~> 10.0'
-  s.add_development_dependency 'rspec',   '~> 2.14'
-  s.add_development_dependency 'webmock', '~> 1.15.0'
+  s.add_development_dependency 'awesome_print', '~> 1.6.1'
+  s.add_development_dependency 'vcr',           '~> 2.8.0'
+  s.add_development_dependency 'rake',          '~> 10.0'
+  s.add_development_dependency 'rspec',         '~> 2.14'
+  s.add_development_dependency 'webmock',       '~> 1.15.0'
 end
