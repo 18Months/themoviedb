@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 04 Mar 2014 15:54:56 GMT
+      - Wed, 05 Mar 2014 15:19:51 GMT
       Etag:
       - "\"571fb198111cbe3e64a14f7ad13dde1a\""
       Server:
@@ -35,9 +35,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '21557'
+      - '19457'
       X-Memc-Expires:
-      - '43'
+      - '2143'
       X-Memc-Key:
       - 92336835539ec7058a3b692d1aed6743
       Content-Length:
@@ -53,5 +53,5 @@ http_interactions:
         Event\"},{\"id\":10757,\"name\":\"Sports Film\"},{\"id\":10748,\"name\":\"Suspense\"},{\"id\":10770,\"name\":\"TV
         movie\"},{\"id\":53,\"name\":\"Thriller\"},{\"id\":10752,\"name\":\"War\"},{\"id\":37,\"name\":\"Western\"}]}"
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 15:54:56 GMT
+  recorded_at: Wed, 05 Mar 2014 15:19:52 GMT
 recorded_with: VCR 2.8.0

@@ -30,10 +30,6 @@ describe Tmdb::Genre do
     end
   end
 
-  it 'should respond to #movies method' do
-    Tmdb::Genre.should respond_to(:movies)
-  end
-
   context '#movies' do
     let(:genre_movies) do
       VCR.use_cassette 'genre/movies' do
@@ -51,7 +47,7 @@ describe Tmdb::Genre do
 
     it { should be_an_instance_of(Tmdb::Genre) }
     it 'should have results of kind Tmdb::Movie' do
-      genre_movies.results.first.should be_an_instance_of(Tmdb::Movie)
+      genre_movies.results.sample.should be_an_instance_of(Tmdb::Movie)
     end
 
     it 'could have multiple pages' do

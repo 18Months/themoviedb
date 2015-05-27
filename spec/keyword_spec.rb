@@ -8,6 +8,20 @@ describe Tmdb::Keyword do
     Tmdb::Api.language('en')
   end
 
+  context '#detail' do
+    let(:keyword_detail) do
+      VCR.use_cassette 'keyword/detail' do
+        Tmdb::Keyword.detail(1721)
+      end
+    end
+
+    subject { keyword_detail }
+
+    it 'should generate an Tmdb::Keyword object' do
+      keyword_detail.should be_an_instance_of(Tmdb::Keyword)
+    end
+  end
+
   context '#movies' do
     let(:keyword_movies) do
       VCR.use_cassette 'keyword/movies' do
