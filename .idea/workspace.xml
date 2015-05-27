@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e95aa0e-89a1-4f5f-863a-44b0e7635097" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/themoviedb.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/api.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/api.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/collection.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/collection.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/company.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/company.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/configuration.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/configuration.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/episode.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/episode.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/find.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/find.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/genre.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/genre.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/job.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/job.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/movie.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/movie.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/person.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/person.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/resource.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/resource.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/search.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/search.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/season.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/season.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themoviedb.gemspec" afterPath="$PROJECT_DIR$/themoviedb.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb.rb" afterPath="$PROJECT_DIR$/lib/themoviedb.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/tv.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/tv.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themoviedb/version.rb" afterPath="$PROJECT_DIR$/lib/themoviedb/version.rb" />
-    </list>
+    <list default="true" id="6e95aa0e-89a1-4f5f-863a-44b0e7635097" name="Default" comment="" />
     <ignored path="themoviedb.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -99,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/themoviedb/search.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33282208">
+            <state vertical-scroll-proportion="0.0">
               <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
               <folding />
             </state>
@@ -129,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.24233128">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -794,14 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/themoviedb/season.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -852,8 +816,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/themoviedb/search.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33282208">
+        <state vertical-scroll-proportion="0.0">
           <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24233128">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding />
         </state>
       </provider>
