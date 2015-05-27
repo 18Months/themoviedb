@@ -15,7 +15,7 @@ module Tmdb
     end
 
     def self.language(lang)
-      if (lang.nil?)
+      if lang.nil?
         self.config.delete(:language)
       else
         self.config[:language] = lang

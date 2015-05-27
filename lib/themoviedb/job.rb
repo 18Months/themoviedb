@@ -18,9 +18,9 @@ module Tmdb
       attr_accessor field
     end
 
-    def self.list
+    def self.list(conditions={})
       search = Tmdb::Search.new("/job/list")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
   end
 end

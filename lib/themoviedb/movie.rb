@@ -44,33 +44,33 @@ module Tmdb
     end
 
     #Get the latest movie id. singular
-    def self.latest
+    def self.latest(conditions={})
       search = Tmdb::Search.new("/movie/latest")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the list of upcoming movies. This list refreshes every day. The maximum number of items this list will include is 100.
-    def self.upcoming
+    def self.upcoming(conditions={})
       search = Tmdb::Search.new("/movie/upcoming")
-      search.fetch
+      search.fetch(conditions)
     end
 
     #Get the list of movies playing in theatres. This list refreshes every day. The maximum number of items this list will include is 100.
-    def self.now_playing
+    def self.now_playing(conditions={})
       search = Tmdb::Search.new("/movie/now_playing")
-      search.fetch
+      search.fetch(conditions)
     end
 
     #Get the list of popular movies on The Movie Database. This list refreshes every day.
-    def self.popular
+    def self.popular(conditions={})
       search = Tmdb::Search.new("/movie/popular")
-      search.fetch
+      search.fetch(conditions)
     end
 
     #Get the list of top rated movies. By default, this list will only include movies that have 10 or more votes. This list refreshes every day.
-    def self.top_rated
+    def self.top_rated(conditions={})
       search = Tmdb::Search.new("/movie/top_rated")
-      search.fetch
+      search.fetch(conditions)
     end
 
     #Discover movies by different types of data like average rating, number of votes, genres and certifications.
@@ -83,49 +83,49 @@ module Tmdb
     #Get the alternative titles for a specific movie id.
     def self.alternative_titles(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/alternative_titles")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the cast information for a specific movie id.
     def self.casts(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/casts")
-      search.fetch_response.cast
+      search.fetch_response(conditions).cast
     end
 
     #Get the cast information for a specific movie id.
     def self.crew(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/casts")
-      search.fetch_response.crew
+      search.fetch_response(conditions).crew
     end
 
     #Get the images (posters and backdrops) for a specific movie id.
     def self.images(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/images")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the plot keywords for a specific movie id.
     def self.keywords(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/keywords")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the release date by country for a specific movie id.
     def self.releases(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/releases")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the trailers for a specific movie id.
     def self.trailers(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/trailers")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the translations for a specific movie id.
     def self.translations(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/translations")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the similar movies for a specific movie id.
@@ -138,7 +138,7 @@ module Tmdb
     #Get the lists that the movie belongs to.
     def self.lists(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/lists")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the changes for a specific movie id.
@@ -148,13 +148,13 @@ module Tmdb
     #The language is present on fields that are translatable.
     def self.changes(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/changes")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the credits for a specific movie id.
     def self.credits(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
   end

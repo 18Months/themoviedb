@@ -18,7 +18,7 @@ module Tmdb
     #Get all of the images for a particular collection by collection id.
     def self.images(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/images")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
   end

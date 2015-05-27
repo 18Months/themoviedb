@@ -3,6 +3,14 @@ module Tmdb
     @@endpoints = {}
     @@endpoint_id = {}
 
+    def initialize(attributes={})
+      attributes.each do |key, value|
+        if self.respond_to?(key.to_sym)
+          self.instance_variable_set("@#{key}", value)
+        end
+      end
+    end
+
     def self.has_resource(singular=nil, opts={})
       @@endpoints[self.name.downcase] = {
         :singular => singular.nil? ? "#{self.name.downcase}" : singular,
@@ -40,48 +48,38 @@ module Tmdb
       end
     end
 
-    def self.search(query)
+    def self.search(query, conditions={})
       search = Tmdb::Search.new
       search.resource("#{self.endpoints[:singular]}")
       search.query(query)
-      search.fetch.collect do |result|
+      search.fetch(conditions).collect do |result|
         self.new(result)
       end
     end
 
-    def self.find(query)
+    def self.find(query, conditions={})
       search = Tmdb::Search.new
       search.resource("#{self.endpoints[:singular]}")
       search.query(query)
-      search.fetch.collect do |result|
+      search.fetch(conditions).collect do |result|
         self.new(result)
       end
     end
-    def self.myfind(query)
-        Rails.logger.debug("calling myfind with #{query}  endpoint=#{self.endpoints[:singular]}")
+
+    def self.myfind(query, conditions={})
         search = Tmdb::Search.new
         search.resource("find")
         search.query(query)
-        search.fetch.collect do |result|
+        search.fetch(conditions).collect do |result|
           self.new(result)
         end
     end
+
     def self.myfind_imdb_id(id, conditions={})
       search = Tmdb::Search.new("/find/#{self.endpoint_id + id.to_s}")
       search.filter(conditions)
       search.fetch_response(external_source: 'imdb_id')
     end
 
-    #class << self
-    #  alias_method :find, :search
-    #end
-
-    def initialize(attributes={})
-      attributes.each do |key, value|
-        if self.respond_to?(key.to_sym)
-          self.instance_variable_set("@#{key}", value)
-        end
-      end
-    end
   end
 end

@@ -7,7 +7,6 @@ module Tmdb
     end
 
     def query(query)
-      Rails.logger.debug("calling query with #{query}")
       @params[:query] = "#{query}"
       self
     end
@@ -23,7 +22,6 @@ module Tmdb
     end
 
     def resource(resource)
-      Rails.logger.debug("calling resource with #{resource}")
       @resource = case resource
       when 'movie'
         '/search/movie'
@@ -60,14 +58,14 @@ module Tmdb
     end
 
     #Sends back main data
-    def fetch
-      fetch_response.results
+    def fetch(conditions={})
+      fetch_response(conditions).results
     end
 
     #Send back whole response
     def fetch_response(conditions={})
-      if conditions[:external_source]
-        options = @params.merge(Api.config.merge({external_source: conditions[:external_source]}))
+      if conditions
+        options = @params.merge(Api.config.merge(conditions))
       else
         options = @params.merge(Api.config)
       end
@@ -79,5 +77,6 @@ module Tmdb
       Api.set_response({'code' => response.code, 'etag' => etag})
       return response.to_hash.to_hashugar
     end
+
   end
 end

@@ -37,15 +37,15 @@ module Tmdb
     end
 
     #Get the list of popular TV shows. This list refreshes every day.
-    def self.popular
+    def self.popular(conditions={})
       search = Tmdb::Search.new("/tv/popular")
-      search.fetch
+      search.fetch(conditions)
     end
 
     #Get the list of top rated TV shows. By default, this list will only include TV shows that have 2 or more votes. This list refreshes every day.
-    def self.top_rated
+    def self.top_rated(conditions={})
       search = Tmdb::Search.new("/tv/top_rated")
-      search.fetch
+      search.fetch(conditions)
     end
 
     #Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates
@@ -58,32 +58,32 @@ module Tmdb
     #Get the cast information about a TV series.
     def self.cast(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")
-      search.fetch_response.cast
+      search.fetch_response(conditions).cast
     end
 
     #Get the crew information about a TV series.
     def self.crew(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")
-      search.fetch_response.crew
+      search.fetch_response(conditions).crew
     end
     
     
     #Get the video trailers for a TV series.
     def self.videos(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/videos")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the external ids that we have stored for a TV series.
     def self.external_ids(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/external_ids")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
     #Get the images (posters and backdrops) for a TV series.
     def self.images(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/images")
-      search.fetch_response
+      search.fetch_response(conditions)
     end
 
   end

@@ -29,24 +29,24 @@ module Tmdb
 			alias_method :find, :search
 		end
 
-		def self.list
+		def self.list(conditions={})
 			search = Tmdb::Search.new("/genre/list")
-			search.fetch_response
+			search.fetch_response(conditions)
 		end
 
-		def self.detail(id, conditions={})
+		def self.detail(id, params={}, conditions={})
 			url = "/genre/#{id}/movies"
-			if !conditions.empty?
+			if !params.empty?
 				url << "?"
-				conditions.each_with_index do |(key, value), index|
+				params.each_with_index do |(key, value), index|
 					url << "#{key}=#{value}"
-					if index != conditions.length - 1
+					if index != params.length - 1
 						url << "&"
 					end
 				end
 			end
 			search = Tmdb::Search.new(url)
-			self.new(search.fetch_response)
+			self.new(search.fetch_response(conditions))
 		end
 
 		def name
